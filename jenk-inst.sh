@@ -2,15 +2,15 @@
 
 #!/bin/bash
 
-sudo wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-sudo su
-sudo cd /etc/apt/
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 
-sudo echo "deb https://pkg.jenkins.io/debian-stable binary/" >> sources.list
+cd /etc/apt/
 
-sudo apt-get update
-sudo apt-get install jenkins -y
-sudo service jenkins start
+echo "deb https://pkg.jenkins.io/debian-stable binary/" >> sources.list
+
+apt-get update
+apt-get install jenkins -y
+service jenkins start
 
 
 
